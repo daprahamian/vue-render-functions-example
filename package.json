@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "An example of Vue.js render functions and functional components",
   "author": "Dan Aprahamian <dan.aprahamian@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:daprahamian/vue-render-functions-example.git"
+  },
+  "homepage": "https://github.com/daprahamian/vue-render-functions-example",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
