@@ -6,31 +6,31 @@ import Link from 'bootstrap-vue/es/components/link/link';
 export default {
   name: 'render-function',
   props: ['options'],
-  render(h) {
+  render(createElement) {
     const { link, badge, alert } = this.options;
 
-    let element = h('span', this.$slots.default);
+    let element = createElement('span', this.$slots.default);
 
     if (link) {
-      element = h(Link, { props: { href: link } }, [element]);
+      element = createElement(Link, { props: { href: link } }, [element]);
     }
 
     if (badge) {
-      element = h('div', [
+      element = createElement('div', [
         element,
-        h(Badge, badge),
+        createElement(Badge, badge),
       ]);
     }
 
     if (alert) {
-      element = h(
+      element = createElement(
         Alert,
         { attrs: { show: true } },
         [element],
       );
     }
 
-    return h('div', [element]);
+    return createElement('div', [element]);
   },
 };
 </script>
